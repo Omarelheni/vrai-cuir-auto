@@ -1,6 +1,6 @@
 /*function Getcolors(){
 
-$.get( "http://127.0.0.1:8000/colors/", function( data ) {
+$.get( "http://127.0.0.1:5000/colors/", function( data ) {
 data .splice('',1);
 $('.color-picker').each(function(event){
 		for (var i = 0; i < data .length; i++ ) {
@@ -10,7 +10,7 @@ $('.color-picker').each(function(event){
 });*/
 
 function Getcolors(element){
-$.get( "http://127.0.0.1:8000/colors/", function( data ) {
+$.get( "http://127.0.0.1:5000/colors/", function( data ) {
 data .splice('',1);
 if (element.has("li").length===0){
 		for (var i = 0; i < data .length; i++ ) {

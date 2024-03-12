@@ -1,0 +1,29 @@
+version : '3'
+
+services:
+  vrai_cuir_web :
+    container_name: "vrai_cuir"
+    build:
+      context : .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - vrai_cuir_db
+    volumes:
+      - ./:/app/
+    env_file:
+      - ./.env
+
+
+  vrai_cuir_db :
+    image: postgres:12.4
+    environment:
+      POSTGRES_USER : ${DB_USER}
+      POSTGRES_PASSWORD : ${DB_PASSWORD}
+      POSTGRES_DB : ${DB_NAME}
+
+  adminer:
+    image: adminer
+    restart: on-failure:5
+    ports:
+      - 8088:8080

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Message</title>
+    <style>
+        .popup {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f44336;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            display: none;
+            z-index: 9999;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .popup.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    <div class="popup" id="failurePopup">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var popup = document.getElementById('failurePopup');
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+</body>
+</html>
