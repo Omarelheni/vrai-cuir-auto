@@ -11,8 +11,8 @@ This Django-based project showcases a catalog of cars with detailed seat coverag
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+   git clone https://github.com/Omarelheni/vrai-cuir-auto.git
+   cd vrai-cuir-auto
    ```
 2. Build and start the application using Docker Compose:
    ```bash
