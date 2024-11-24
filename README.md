@@ -1,6 +1,6 @@
 # Vrai Cuir Auto
 
-This Django-based project showcases a catalog of cars with detailed seat coverage highlights.
+This Django-based project showcases a catalog of cars with detailed seat coverage highlights, allowing users to filter cars based on the type of leather coverage designs.
 
 ## Prerequisites
 
